@@ -16,6 +16,9 @@ def search_wikepedia():
 @app.route('/search_youtube')
 def search_youtube():
     query = request.args.get('query')
-    # pran add your code here, query is the search query
+    # search youtube for the query
+    r = requests.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=' + query + '&key=AIzaSyAYBeWhgOAijtFHeRl_oNSCOCXRyFc2Q8M')
+    data = r.json()
+    return jsonify(data)
 
 app.run(debug=True)
