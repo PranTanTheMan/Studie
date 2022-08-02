@@ -55,4 +55,8 @@ def resources():
 def workspace():
     return render_template('workspace.html')
 
+@app.route('/yt')
+def yt():
+    return render_template('search-youtube.html')
+
 app.run(debug=True)
