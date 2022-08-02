@@ -1,12 +1,12 @@
-class Navbar extends HTMLElement{
-    constructor(){
-      super();
-    }
-    connectedCallback(){
-      this.innerHTML = `
-      <link rel="stylesheet" href="/static/css/global.css" />
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-      <header>
+class Navbar extends HTMLElement {
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.innerHTML = `
+      <header data-aos="fade-down"
+      data-aos-duration="1000"
+      data-aos-delay="0">
       <nav>
         <ul class="list">
           <li>
@@ -15,7 +15,7 @@ class Navbar extends HTMLElement{
               href="/resources"
               data-aos="fade-up"
               data-aos-duration="1000"
-              data-aos-delay="100"
+              data-aos-delay="200"
               >Resources</a
             >
           </li>
@@ -25,7 +25,7 @@ class Navbar extends HTMLElement{
               href="/workspace"
               data-aos="fade-up"
               data-aos-duration="1000"
-              data-aos-delay="200"
+              data-aos-delay="300"
               >Workspace</a
             >
           </li>
@@ -35,15 +35,15 @@ class Navbar extends HTMLElement{
               href="/crew"
               data-aos="fade-up"
               data-aos-duration="1000"
-              data-aos-delay="350"
+              data-aos-delay="450"
               >Crew</a
             >
           </li>
         </ul>
       </nav>
     </header>
-      `
-    }
+      `;
   }
+}
 
-customElements.define('navbar-header', Navbar);
+customElements.define("navbar-header", Navbar);

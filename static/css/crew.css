@@ -30,7 +30,8 @@ h2.author {
 
 .author-description {
   color: var(--secondary-darker);
-  height: 120px;
+  width: 200px;
+  height: 30px;
 }
 
 div.card {
@@ -47,7 +48,7 @@ div.text-wrapper {
   align-items: center;
   padding: 1rem;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 div.social-link {
@@ -58,7 +59,6 @@ div.social-link {
   margin: 0;
   width: 48px;
   height: 48px;
-
   margin: 1rem 5%;
 }
 
@@ -89,4 +89,24 @@ div.social-link {
 div.social-link:hover {
   border: 1px solid var(--tertiary-darker);
   transition: all 1s ease-in-out;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  margin-bottom: 1rem;
+  margin: 2rem 5%;
+  border: 8px solid var(--basic-color);
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: var(--tertiary-color);
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+  height: 100px;
+  margin-bottom: 3.5rem;
 }
