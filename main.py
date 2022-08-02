@@ -17,10 +17,32 @@ def search_wikepedia():
 def search_youtube():
     query = request.args.get('query')
     # search youtube for the query
-    r = requests.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=' + query + '&key=AIzaSyAYBeWhgOAijtFHeRl_oNSCOCXRyFc2Q8M')
+    r = requests.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=' + 'learn ' + query + '&key=AIzaSyAYBeWhgOAijtFHeRl_oNSCOCXRyFc2Q8M')
     data = r.json()
-    return jsonify(data)
-
+    for i in data['items']:
+        if i['snippet']['channelTitle'] == 'Tyler Dewitt':
+            return {
+                'title': i['snippet']['title'],
+                'description': i['snippet']['description'],
+                'url': 'https://www.youtube.com/watch?v=' + i['id']['videoId'],
+                'thumbnail': i['snippet']['thumbnails']['high']['url'],
+                'channel': i['snippet']['channelTitle']
+            }
+        elif i['snippet']['channelTitle'] == 'CrashCourse':
+            return {
+                'title': i['snippet']['title'],
+                'description': i['snippet']['description'],
+                'url': 'https://www.youtube.com/watch?v=' + i['id']['videoId'],
+                'thumbnail': i['snippet']['thumbnails']['high']['url'],
+                'channel': i['snippet']['channelTitle']
+            }
+    return {
+                'title': i['snippet']['title'],
+                'description': i['snippet']['description'],
+                'url': 'https://www.youtube.com/watch?v=' + i['id']['videoId'],
+                'thumbnail': i['snippet']['thumbnails']['high']['url'],
+                'channel': i['snippet']['channelTitle']
+            }
 @app.route('/crew')
 def crew():
     return render_template('crew.html')
