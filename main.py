@@ -13,12 +13,24 @@ def search_wikepedia():
     r = requests.get('https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=&explaintext=&titles=' + query)
     data = r.json()
 
-@app.route('/search_youtube')
+@app.route('/search-youtube')
 def search_youtube():
     query = request.args.get('query')
     # search youtube for the query
     r = requests.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=' + query + '&key=AIzaSyAYBeWhgOAijtFHeRl_oNSCOCXRyFc2Q8M')
     data = r.json()
     return jsonify(data)
+
+@app.route('/crew')
+def crew():
+    return render_template('crew.html')
+
+@app.route('/resources')
+def resources():
+    return render_template('resources.html')
+
+@app.route('/workspace')
+def workspace():
+    return render_template('workspace.html')
 
 app.run(debug=True)
