@@ -47,3 +47,4 @@ class Navbar extends HTMLElement{
   }
 
 customElements.define('navbar-header', Navbar);
+AOS.init();
