@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/global.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Name | Pomodoro Timer</title>
+  </head>
+  <body>
+    <navbar-header></navbar-header>
+
+    <div class="timer">
+      <span class="min">0</span>
+      <span>:</span>
+      <span class="sec">00</span>
+      <svg class="ring" height="300" width="300">
+        <circle
+          class="ring-circle"
+          cx="150"
+          cy="150"
+          r="100"
+          fill="transparent"
+          stroke="white"
+          stroke-width="8"
+        />
+      </svg>
+    </div>
+    <!-- CONTAINER -->
+    <div class="button-group">
+      <button class="start" id="start">Start</button>
+      <button class="pause" id="pause">Pause</button>
+      <button class="reset" id="reset">Reset</button>
+    </div>
+    <!--  -->
+    <div class="settings">
+      <form action=".">
+        <label for="pomodoro">Pomodoro Length</label>
+        <input type="number" id="pomodoro" value="25" />
+        <label for="short-break">Short Break Length</label>
+        <input type="number" id="shortBreak" value="5" />
+        <button type="submit">Save settings</button>
+      </form>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="/static/js/global.js"></script>
+    <script src="/static/js/timer.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
