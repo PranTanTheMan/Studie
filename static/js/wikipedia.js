@@ -26,7 +26,8 @@ $input.on('keydown', function () {
 function doneTyping () {
     var query = $input.val();
     search(query, (response) => {
-        console.log(response)
         document.getElementById("result").innerHTML = response;
     })
-}
+} 
+
+//

@@ -12,12 +12,9 @@ def index():
 @app.route('/search-wikipedia')
 def search_wikepedia():
     query = request.args.get('query')
-    r = requests.get(f'https://en.wikipedia.org/w/api.php?action=opensearch&search={query}&limit=1&namespace=0&format=json')
-    r = list(r)
-    r = r[-1]
-    r = requests.get(r)
-    r = r.json()
-    return r
+    r = requests.get(f'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch={query}&format=json')
+    data = r.json()['query']['search']
+    return jsonify(data)
 
 @app.route('/search-youtube')
 def search_youtube():
@@ -60,7 +57,7 @@ def crew():
 @app.route('/resources')
 def resources():
     return render_template('resources.html')
-
+#alr so what should we work on next?
 @app.route('/workspace')
 def workspace():
     return render_template('workspace.html')
