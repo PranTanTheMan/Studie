@@ -5,7 +5,7 @@ function search(query, callback) {
             callback(this.responseText);
         }
     }
-    xhttp.open("GET", "/search-youtube?query=" + query, true);
+    xhttp.open("GET", "/search-wikipedia?query=" + query, true);
     xhttp.send();
 }
 

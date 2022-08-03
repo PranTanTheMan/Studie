@@ -30,6 +30,7 @@ html {
   font-family: "General Sans", sans-serif;
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 /* NAVIGATION */
@@ -103,5 +104,6 @@ header {
 
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: none;
+  /* border: 1px solid rgba(255, 255, 255, 0.18); */
 }
