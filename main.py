@@ -70,4 +70,8 @@ def yt():
 def wiki():
     return render_template('wiki-search.html')
 
+@app.route('/music')
+def music():
+    return render_template('musictest.html')
+
 app.run(debug=True)

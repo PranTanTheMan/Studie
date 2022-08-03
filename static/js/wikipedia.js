@@ -11,7 +11,7 @@ function search(query, callback) {
 
 
 var typingTimer;
-var doneTypingInterval = 1000;
+var doneTypingInterval = 500;
 var $input = $('#myInput');
 
 $input.on('keyup', function () {
@@ -27,7 +27,17 @@ function doneTyping () {
     var query = $input.val();
     search(query, (response) => {
         document.getElementById("result").innerHTML = response;
+        function valuePrint(response) {
+            for (var i in response) {
+              if (response[i].title instanceof Object) {
+                valuePrint(response[i].title);
+              } else {
+                document.getElementById('result').innerHTML(response[i]);
+              }
+            }
+          }
+        valuePrint(response);
     })
-} 
+}
 
 //
