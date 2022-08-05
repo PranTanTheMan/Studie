@@ -54,9 +54,17 @@ def search_youtube():
 def crew():
     return render_template('crew.html')
 
+
+
+card_info = [
+    {'title': 'Pomodoro Timer', 'descripton': ' A pleasingly aesthetic timer using pomodoro technique that enahnces your productivity.', 'links': '/timer'},
+]
+
+
+
 @app.route('/resources')
 def resources():
-    return render_template('resources.html')
+    return render_template('resources.html', cards = card_info)
 #alr so what should we work on next?
 @app.route('/workspace')
 def workspace():
@@ -73,5 +81,9 @@ def wiki():
 @app.route('/music')
 def music():
     return render_template('musictest.html')
+
+@app.route('/timer')
+def timer():
+    return render_template('timer.html')
 
 app.run(debug=True)
