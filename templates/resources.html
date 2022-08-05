@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/static/css/global.css" />
     <link rel="stylesheet" href="/static/css/resources.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>Document</title>
+    <title>Name | Resources</title>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -15,10 +15,135 @@
     <!-- MAIN CONTENT -->
     <div class="container">
       <div class="welcome-content">
-        <h1>Welcome!</h1>
-        <h3>Resources to assist your study session, learn beyond, and quench your curiousity </h3>
+        <div class="text-wrapper">
+          <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            Welcome!
+          </h1>
+          <h3
+            class="hero-description"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="1200"
+          >
+            Resources to assist
+            <span class="gradient-underline">learning beyond</span>,
+            <span>your study sessions</span>, and
+            <span class="gradient-underline">quenching your curiousity.</span>
+          </h3>
+        </div>
+        <img
+          data-aos="fade-in"
+          data-aos-duration="1000"
+          data-aos-delay="2000"
+          class="hero-image"
+          src="/static/images/3D-young-woman.png"
+          alt="resoureces-hero-image"
+        />
       </div>
+      <a href="#resources-section">
+        <div
+          class="arrow-container"
+          data-aos="fade-in"
+          data-aos-duration="1000"
+          data-aos-delay="2000"
+        >
+          <img
+            class="scroll-arrow"
+            src="/static/images/icons8-down-arrow-64.png"
+            alt=""
+          />
+        </div>
+      </a>
+      <!--  -->
+      <!--  -->
+      <section id="resources-section">
+        <h1
+          class="resources-section-title"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-delay="800"
+        >
+          Resources
+        </h1>
+        <div class="gradient-divider"></div>
+        <div class="card-wrapper">
+          <!-- CARDS -->
+
+          <div
+            class="card"
+            data-aos="fade-in"
+            data-aos-duration="1500"
+            data-aos-delay="1200"
+          >
+            <h4 class="card-title">Pomodoro Timer</h4>
+            <p class="card-description">
+              A pleasingly aesthetic timer using
+              <span class="gradient-resource-section">pomodoro technique</span>.
+              that enahnces your productivity.
+            </p>
+            <a href="/timer" class="open-app-btn">Open App</a>
+          </div>
+          <div
+            class="card"
+            data-aos="fade-in"
+            data-aos-duration="1500"
+            data-aos-delay="1400"
+          >
+            <h4 class="card-title">Pomodoro Timer</h4>
+            <p class="card-description">
+              A pleasingly aesthetic timer using
+              <span class="gradient-resource-section">pomodoro technique</span>.
+              that enahnces your productivity.
+            </p>
+            <a href="/timer" class="open-app-btn">Open App</a>
+          </div>
+          <div
+            class="card"
+            data-aos="fade-in"
+            data-aos-duration="1500"
+            data-aos-delay="1600"
+          >
+            <h4 class="card-title">Pomodoro Timer</h4>
+            <p class="card-description">
+              A pleasingly aesthetic timer using
+              <span class="gradient-resource-section">pomodoro technique</span>.
+              that enahnces your productivity.
+            </p>
+            <a href="/timer" class="open-app-btn">Open App</a>
+          </div>
+          <div
+            class="card"
+            data-aos="fade-in"
+            data-aos-duration="1500"
+            data-aos-delay="1800"
+          >
+            <h4 class="card-title">Pomodoro Timer</h4>
+            <p class="card-description">
+              A pleasingly aesthetic timer using
+              <span class="gradient-resource-section">pomodoro technique</span>.
+              that enahnces your productivity.
+            </p>
+            <a href="/timer" class="open-app-btn">Open App</a>
+          </div>
+          <div
+            class="card"
+            data-aos="fade-in"
+            data-aos-duration="1500"
+            data-aos-delay="800"
+          >
+            <h4 class="card-title">Pomodoro Timer</h4>
+            <p class="card-description">
+              A pleasingly aesthetic timer using
+              <span class="gradient-resource-section">pomodoro technique</span>.
+              that enahnces your productivity.
+            </p>
+            <a href="/timer" class="open-app-btn">Open App</a>
+          </div>
+          <!--  -->
+        </div>
+      </section>
     </div>
+    <!--  -->
     <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="/static/js/global.js"></script>
@@ -26,5 +151,8 @@
       src="https://kit.fontawesome.com/cf0be82f32.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

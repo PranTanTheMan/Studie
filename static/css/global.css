@@ -7,6 +7,29 @@
   --basic-color: #ffffff;
   --secondary-lighter: #3b3b3b59;
 }
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/* WIDTH */
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+/* SCROLLBAR TRACK A.K.A BACKGROUND */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tertiary-darker);
+}
 
 @font-face {
   font-family: "General Sans";
@@ -31,6 +54,10 @@ html {
   margin: 0;
   padding: 0;
   color: white;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* NAVIGATION */
