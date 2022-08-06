@@ -4,9 +4,114 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/note.css" />
+    <link rel="stylesheet" href="/static/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Studie | Workspace</title>
   </head>
   <body>
-    <h1>Student paradise</h1>
+    <navbar-header></navbar-header>
+    <h1 class="workspace-header">Pomodoro Timer</h1>
+    <section
+      id="timer-section"
+      data-aos="fade-in"
+      data-aos-duration="1000"
+      data-aos-delay=" 1000"
+    >
+      <div class="timer">
+        <span class="min">0</span>
+        <span>:</span>
+        <span class="sec">00</span>
+        <svg class="ring" height="300" width="300">
+          <circle
+            class="ring-circle"
+            cx="150"
+            cy="150"
+            r="100"
+            fill="transparent"
+            stroke="white"
+            stroke-width="8"
+          />
+        </svg>
+      </div>
+      <!-- CONTAINER -->
+      <div class="button-group">
+        <button class="start" id="start">Start</button>
+        <button class="pause" id="pause">Pause</button>
+        <button class="reset" id="reset">Reset</button>
+      </div>
+      <button id="modal-btn">
+        <img src="/static/images/settings-icon.png" class="settings-icon" />
+      </button>
+      <!--  -->
+
+      <div id="my-modal" class="settings">
+        <form action=".">
+          <div class="close"></div>
+          <label for="pomodoro">Pomodoro Length</label>
+          <input type="number" id="pomodoro" value="25" />
+          <label for="short-break">Short Break Length</label>
+          <input type="number" id="shortBreak" value="5" />
+          <button class="saveBtn" type="submit">Save settings</button>
+        </form>
+      </div>
+    </section>
+    <!-- <section id="music-player"></section> -->
+    <h1 class="workspace-header" id="notes-app-header">Notes App</h1>
+    <section id="notes-app">
+      <div class="popup-box">
+        <div class="popup">
+          <div class="content">
+            <header class="header-pop-up">
+              <p></p>
+              <i class="uil uil-times"></i>
+            </header>
+            <form action="#">
+              <div class="row title">
+                <label
+                  style="
+                    color: var(--primary-color);
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                  "
+                >
+                  Title</label
+                >
+                <input class="title-input" type="text" spellcheck="false" />
+              </div>
+              <div class="row description">
+                <label style="color: var(--primary-color)">Description</label>
+                <textarea
+                  class="description-input"
+                  spellcheck="false"
+                ></textarea>
+              </div>
+              <button class="popup-btn"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <li class="add-box" style="width: 64px; height: 64px">
+          <div class="icon">
+            <i class="uil uil-plus"></i>
+          </div>
+          <p></p>
+        </li>
+      </div>
+    </section>
+
+    <script>
+      AOS.init();
+    </script>
+    <script src="/static/js/notes-app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="/static/js/global.js"></script>
+    <script src="/static/js/timer.js"></script>
+    <script src="/static/js/main.js"></script>
   </body>
 </html>

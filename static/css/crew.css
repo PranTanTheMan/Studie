@@ -104,7 +104,7 @@ div.social-link:hover {
 .image-wrapper {
   display: flex;
   justify-content: center;
-  background-color: var(--tertiary-color);
+  background-color: var(--tertiary-darker);
   border-top-left-radius: 17px;
   border-top-right-radius: 17px;
   height: 100px;

@@ -8,7 +8,7 @@ class Navbar extends HTMLElement {
       data-aos-duration="1000"
       data-aos-delay="0">
       <nav>
-        <ul class="list">
+        <ul class="list" >
           <li>
             <a
               class="underline"

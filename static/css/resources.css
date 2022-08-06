@@ -114,11 +114,11 @@ h1 {
 
 .card-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
   margin-top: 10rem;
-  margin-left: 6rem;
-  margin-right: 6rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
 }
 
 .card {
@@ -145,11 +145,12 @@ h1 {
 .card-description {
   font-size: 1.5rem;
   font-weight: 400;
-  margin-top: 2rem;
+  margin-top: 3.5rem;
   color: var(--secondary-darker);
   margin-bottom: 3rem;
   text-align: center;
   width: 250px;
+  height: 160px;
 }
 
 .open-app-btn {
@@ -182,4 +183,29 @@ h1 {
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(155deg, #ac401c 30%, #ffa774 70%);
+}
+
+.grid-col-span-2 {
+  grid-column: span 2;
+}
+
+.card1 {
+  width: 800px;
+  margin-right: 9rem;
+}
+
+.card-description-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.card3 {
+  width: 800px;
+}
+
+.card2 {
+  margin-right: 0;
 }

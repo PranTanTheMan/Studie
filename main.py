@@ -86,4 +86,7 @@ def music():
 def timer():
     return render_template('timer.html')
 
+@app.rout('/404')
+def error():
+    return render_template('404.html')
 app.run(debug=True)
