@@ -12,7 +12,7 @@ class Navbar extends HTMLElement {
           <li>
             <a
               class="underline"
-              href="/templates/resources.html"
+              href="/resources.html"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="200"
@@ -22,7 +22,7 @@ class Navbar extends HTMLElement {
           <li>
             <a
               class="underline"
-              href="/templates/workspace.html"
+              href="/workspace.html"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="300"
@@ -32,7 +32,7 @@ class Navbar extends HTMLElement {
           <li>
             <a
               class="underline"
-              href="/templates/crew.html"
+              href="/crew.html"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="450"
