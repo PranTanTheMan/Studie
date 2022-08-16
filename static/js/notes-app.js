@@ -115,4 +115,5 @@ addBtn.addEventListener("click", (e) => {
     showNotes();
     closeIcon.click();
   }
+  
 });
